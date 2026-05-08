@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <main id="top" className="overflow-hidden">
       <section className="relative isolate border-b border-main-200/70">
-        <div className="absolute inset-x-0 top-0 -z-10 h-[34rem] bg-linear-to-br from-primary-100 via-main-0 to-accent-100" />
+        <div className="absolute inset-x-0 top-0 -z-10 h-136 bg-linear-to-br from-primary-100 via-main-0 to-accent-100" />
         <div className="absolute left-[14%] top-16 -z-10 h-64 w-64 rounded-full bg-accent-300/20 blur-3xl" />
         <div className="absolute right-[12%] top-32 -z-10 h-72 w-72 rounded-full bg-primary-300/20 blur-3xl" />
 
@@ -58,10 +58,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-main-200 bg-main-100/90 p-4 shadow-[0_30px_90px_-45px_rgba(0,0,0,0.35)] backdrop-blur">
+            <div className="rounded-4xl border border-main-200 bg-main-100/90 p-4 shadow-[0_30px_90px_-45px_rgba(0,0,0,0.35)] backdrop-blur">
               <div className="rounded-[1.6rem] border border-main-200 bg-main-0 p-5">
                 <div className="border-b border-main-200 pb-5">
-                  <p className="font-[family:var(--font-mono)] text-xs uppercase tracking-[0.3em] text-main-500">
+                  <p className="font-(--font-mono) text-xs uppercase tracking-[0.3em] text-main-500">
                     Engagement model
                   </p>
                   <h2 className="mt-2 text-2xl font-semibold text-main-950">

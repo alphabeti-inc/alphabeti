@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   title: 'alphabeti | Software Development Company',
   description:
     'Alphabeti is a software development company that designs, builds, and scales modern web platforms, internal tools, and custom digital products.',
+  icons: {
+    icon: '/alpha.png',
+    shortcut: '/alpha.png',
+    apple: '/alpha.png',
+  },
 }
 
 export default function RootLayout({
@@ -31,7 +36,7 @@ export default function RootLayout({
       lang="en"
       className={`${spaceGrotesk.variable} ${ibmPlexMono.variable}`}
     >
-      <body className="bg-main-0 font-[family:var(--font-display)] text-main-1000 antialiased">
+      <body className="bg-main-0 font-(--font-display) text-main-1000 antialiased">
         <div className="min-h-screen bg-main-0">
           <TopNavbar />
           {children}
