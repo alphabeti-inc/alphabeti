@@ -43,14 +43,14 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="font-[family:var(--font-mono)] text-xs uppercase tracking-[0.3em] text-main-500">
+            <p className="font-(--font-mono) text-xs uppercase tracking-[0.3em] text-main-500">
               Contact
             </p>
             <div className="mt-4 flex flex-col gap-3 text-sm text-main-700">
-              <a href="mailto:hello@alphabeti.app" className="transition hover:text-primary-700">
-                hello@alphabeti.app
+              <a href="mailto:hello@alphabeti.co.tz" className="transition hover:text-primary-700">
+                hello@alphabeti.co.tz
               </a>
-              <p>Kampala, Uganda</p>
+              <p>Dar es Salaam, Tanzania</p>
               <p>Strategy, product engineering, delivery</p>
             </div>
           </div>

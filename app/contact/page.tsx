@@ -29,10 +29,10 @@ export default function ContactPage() {
             Reach out with your product idea, current system challenge, or delivery gap. We can help assess scope and recommend the next practical step.
           </p>
           <a
-            href="mailto:hello@alphabeti.app"
+            href="mailto:hello@alphabeti.co.tz"
             className="mt-8 inline-flex rounded-full bg-primary-600 px-6 py-3 text-sm font-semibold text-main-0 transition hover:bg-primary-700"
           >
-            hello@alphabeti.app
+            hello@alphabeti.co.tz
           </a>
         </div>
 

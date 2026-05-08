@@ -14,7 +14,7 @@ export function TopNavbar() {
     <header className="sticky top-0 z-50 border-b border-main-200/70 bg-main-0/85 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 sm:px-8 lg:px-10">
         <Link href="/" className="flex flex-col">
-          <span className="font-[family:var(--font-mono)] text-xs uppercase tracking-[0.35em] text-primary-700">
+          <span className="font-(--font-mono) text-xs uppercase tracking-[0.35em] text-primary-700">
             alphabeti
           </span>
           <span className="text-sm text-main-600">Software development company</span>

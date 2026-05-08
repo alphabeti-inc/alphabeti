@@ -6,12 +6,20 @@ type SocialLink = {
   iconClass: string
 }
 
+type ContactInfo = {
+  label: string
+  value: string
+  href?: string
+  iconClass: string
+}
+
 type TeamMemberData = {
   name: string
   roles: string[]
   github: string
   imageSrc: string
   socials?: SocialLink[]
+  contacts?: ContactInfo[]
 }
 
 const teamMembers: TeamMemberData[] = [
@@ -28,12 +36,34 @@ const teamMembers: TeamMemberData[] = [
       },
       { label: 'X', href: 'https://x.com/your-handle', iconClass: 'bi-twitter-x' },
     ],
+    contacts: [
+      {
+        label: 'Email',
+        value: 'stephen@alphabeti.co.tz',
+        href: 'mailto:stephen@alphabeti.co.tz',
+        iconClass: 'bi-envelope',
+      },
+      {
+        label: 'Phone',
+        value: '+256 700 000000',
+        href: 'tel:+256700000000',
+        iconClass: 'bi-telephone',
+      },
+    ],
   },
   {
     name: 'Eng. Mole ',
     roles: ['Frontend Engineer', 'UI Systems'],
     github: 'https://github.com/molegrace',
     imageSrc: 'https://avatars.githubusercontent.com/u/246514810?v=4',
+    contacts: [
+      {
+        label: 'Email',
+        value: 'mole@alphabeti.co.tz',
+        href: 'mailto:mole@alphabeti.co.tz',
+        iconClass: 'bi-envelope',
+      },
+    ],
   },
 ]
 
