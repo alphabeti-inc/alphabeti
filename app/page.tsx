@@ -113,6 +113,11 @@ export default function Home() {
             href: '/services',
           },
           {
+            title: 'Team',
+            text: 'Meet the people behind Alphabeti and open their public engineering and social profiles.',
+            href: '/team',
+          },
+          {
             title: 'Projects',
             text: 'Review sample engagement types and the outcomes we help teams create.',
             href: '/projects',
