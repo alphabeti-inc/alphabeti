@@ -39,7 +39,7 @@ const teamMembers: TeamMemberData[] = [
     contacts: [
       {
         label: 'Email',
-        value: 'stephen@alphabeti.co.tz',
+        value: 'issah1554@alphabeti.co.tz',
         href: 'mailto:stephen@alphabeti.co.tz',
         iconClass: 'bi-envelope',
       },
