@@ -40,7 +40,7 @@ const teamMembers: TeamMemberData[] = [
       {
         label: 'Email',
         value: 'issah1554@alphabeti.co.tz',
-        href: 'mailto:stephen@alphabeti.co.tz',
+        href: 'mailto:issah1554@alphabeti.co.tz',
         iconClass: 'bi-envelope',
       },
       {
