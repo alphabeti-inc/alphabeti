@@ -21,7 +21,7 @@ export default function ServicesPage() {
     <main>
       <section className="border-b border-main-200 bg-main-50/70">
         <div className="mx-auto w-full max-w-7xl px-6 py-16 sm:px-8 lg:px-10 lg:py-24">
-          <p className="font-[family:var(--font-mono)] text-xs uppercase tracking-[0.35em] text-primary-700">
+          <p className="font-(--font-mono) text-xs uppercase tracking-[0.35em] text-primary-700">
             Services
           </p>
           <h1 className="mt-4 max-w-4xl text-5xl font-semibold tracking-[-0.04em] text-main-1000 sm:text-6xl">

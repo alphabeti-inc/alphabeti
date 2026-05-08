@@ -10,7 +10,7 @@ export default function ContactPage() {
     <main>
       <section className="border-b border-main-200 bg-main-100/70">
         <div className="mx-auto w-full max-w-7xl px-6 py-16 sm:px-8 lg:px-10 lg:py-24">
-          <p className="font-[family:var(--font-mono)] text-xs uppercase tracking-[0.35em] text-primary-700">
+          <p className="font-(--font-mono) text-xs uppercase tracking-[0.35em] text-primary-700">
             Contact
           </p>
           <h1 className="mt-4 max-w-4xl text-5xl font-semibold tracking-[-0.04em] text-main-1000 sm:text-6xl">
@@ -23,7 +23,7 @@ export default function ContactPage() {
       </section>
 
       <section className="mx-auto grid w-full max-w-7xl gap-8 px-6 py-20 sm:px-8 lg:grid-cols-[1fr_0.9fr] lg:px-10">
-        <div className="rounded-[2rem] border border-main-200 bg-main-50 p-8">
+        <div className="rounded-4xl border border-main-200 bg-main-50 p-8">
           <h2 className="text-3xl font-semibold text-main-1000">Start the conversation</h2>
           <p className="mt-4 text-base leading-7 text-main-700">
             Reach out with your product idea, current system challenge, or delivery gap. We can help assess scope and recommend the next practical step.
@@ -36,8 +36,8 @@ export default function ContactPage() {
           </a>
         </div>
 
-        <div className="rounded-[2rem] bg-primary-950 p-8 text-main-0">
-          <p className="font-[family:var(--font-mono)] text-xs uppercase tracking-[0.3em] text-primary-200">
+        <div className="rounded-4xl bg-primary-950 p-8 text-main-0">
+          <p className="font-(--font-mono) text-xs uppercase tracking-[0.3em] text-primary-200">
             Good fit
           </p>
           <div className="mt-6 space-y-4">
