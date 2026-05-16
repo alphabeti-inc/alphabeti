@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import Image from 'next/image'
 
 interface AvatarProps {
     src?: string
@@ -64,11 +65,12 @@ const Avatar: React.FC<AvatarProps> = ({
             title={alt}
         >
             {src && !imgError ? (
-                <img
+                <Image
                     src={src}
                     alt={alt}
+                    fill
                     onError={() => setImgError(true)}
-                    className={`w-full h-full object-cover border-2 border-main-300 ${radiusClass}`}
+                    className={`object-cover border-2 border-main-300 ${radiusClass}`}
                 />
             ) : (
                 <div
