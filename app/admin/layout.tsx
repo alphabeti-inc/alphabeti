@@ -57,14 +57,8 @@ export default function AdminLayout({
         <div className="flex h-full flex-col">
           <div className="border-b border-main-200 px-6 py-5">
             <Link href="/admin" className="flex items-center gap-3">
-              <div className="relative h-10 w-10 overflow-hidden rounded-xl border border-main-200 bg-main-0">
-                <Image
-                  src="/logo.png"
-                  alt="Alphabeti logo"
-                  fill
-                  className="object-contain p-1"
-                  priority
-                />
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-main-200 bg-main-0">
+                <i className="bi bi-triangle-fill text-2xl text-primary-600" />
               </div>
 
               <span>
