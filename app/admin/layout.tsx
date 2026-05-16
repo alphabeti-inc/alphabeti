@@ -2,11 +2,17 @@ import Link from 'next/link'
 
 const adminNavItems = [
   { href: '/admin', label: 'Overview', icon: 'bi-grid-1x2' },
-  { href: '/admin/content', label: 'Content', icon: 'bi-file-earmark-text' },
-  { href: '/admin/team', label: 'Team', icon: 'bi-people' },
   { href: '/admin/leads', label: 'Leads', icon: 'bi-inbox' },
   { href: '/admin/health', label: 'Health', icon: 'bi-activity' },
   { href: '/admin/settings', label: 'Settings', icon: 'bi-sliders' },
+]
+
+const contentNavItems = [
+  { href: '/admin/content', label: 'All content', icon: 'bi-file-earmark-text' },
+  { href: '/admin/about', label: 'About', icon: 'bi-info-circle' },
+  { href: '/admin/services', label: 'Services', icon: 'bi-tools' },
+  { href: '/admin/projects', label: 'Projects', icon: 'bi-kanban' },
+  { href: '/admin/team', label: 'Team', icon: 'bi-people' },
 ]
 
 export default function AdminLayout({
@@ -33,6 +39,27 @@ export default function AdminLayout({
           </div>
 
           <nav className="flex gap-2 overflow-x-auto px-4 py-4 lg:flex-col lg:overflow-visible">
+            <Link
+              href="/admin/content"
+              className="inline-flex shrink-0 items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-main-700 transition hover:bg-primary-50 hover:text-primary-800"
+            >
+              <i className="bi bi-folder2-open" aria-hidden="true" />
+              Content
+            </Link>
+
+            <div className="flex shrink-0 gap-2 lg:-mt-1 lg:ml-4 lg:flex-col lg:border-l lg:border-main-200 lg:pl-3">
+              {contentNavItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="inline-flex shrink-0 items-center gap-3 rounded-xl px-4 py-2.5 text-sm font-medium text-main-600 transition hover:bg-primary-50 hover:text-primary-800"
+                >
+                  <i className={`bi ${item.icon}`} aria-hidden="true" />
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+
             {adminNavItems.map((item) => (
               <Link
                 key={item.href}
