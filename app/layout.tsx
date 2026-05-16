@@ -1,7 +1,5 @@
 import type { Metadata } from 'next'
 import { IBM_Plex_Mono, Space_Grotesk } from 'next/font/google'
-import { Footer } from '@/components/footer'
-import { TopNavbar } from '@/components/top-navbar'
 import './globals.css'
 
 const spaceGrotesk = Space_Grotesk({
@@ -37,11 +35,7 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${ibmPlexMono.variable}`}
     >
       <body className="bg-main-0 font-(--font-display) text-main-1000 antialiased">
-        <div className="min-h-screen bg-main-0">
-          <TopNavbar />
-          {children}
-          <Footer />
-        </div>
+        {children}
       </body>
     </html>
   )
