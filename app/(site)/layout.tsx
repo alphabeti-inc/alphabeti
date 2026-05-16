@@ -12,6 +12,7 @@ export default function SiteLayout({
       <TopNavbar />
       {children}
       <Footer />
+      <Analytics />
     </div>
   )
 }
