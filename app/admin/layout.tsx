@@ -3,6 +3,7 @@ import Link from 'next/link'
 const adminNavItems = [
   { href: '/admin', label: 'Overview', icon: 'bi-grid-1x2' },
   { href: '/admin/content', label: 'Content', icon: 'bi-file-earmark-text' },
+  { href: '/admin/team', label: 'Team', icon: 'bi-people' },
   { href: '/admin/leads', label: 'Leads', icon: 'bi-inbox' },
   { href: '/admin/health', label: 'Health', icon: 'bi-activity' },
   { href: '/admin/settings', label: 'Settings', icon: 'bi-sliders' },
