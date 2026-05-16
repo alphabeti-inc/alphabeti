@@ -1,5 +1,6 @@
 import { Footer } from '@/components/footer'
 import { TopNavbar } from '@/components/top-navbar'
+import { Analytics } from "@vercel/analytics/next"
 
 export default function SiteLayout({
   children,
