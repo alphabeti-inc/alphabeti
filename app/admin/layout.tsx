@@ -2,17 +2,20 @@ import Link from 'next/link'
 
 const adminNavItems = [
   { href: '/admin', label: 'Overview', icon: 'bi-grid-1x2' },
+  {
+    label: 'Content',
+    icon: 'bi-folder2-open',
+    items: [
+      { href: '/admin/content', label: 'All content', icon: 'bi-file-earmark-text' },
+      { href: '/admin/about', label: 'About', icon: 'bi-info-circle' },
+      { href: '/admin/services', label: 'Services', icon: 'bi-tools' },
+      { href: '/admin/projects', label: 'Projects', icon: 'bi-kanban' },
+      { href: '/admin/team', label: 'Team', icon: 'bi-people' },
+    ],
+  },
   { href: '/admin/leads', label: 'Leads', icon: 'bi-inbox' },
   { href: '/admin/health', label: 'Health', icon: 'bi-activity' },
   { href: '/admin/settings', label: 'Settings', icon: 'bi-sliders' },
-]
-
-const contentNavItems = [
-  { href: '/admin/content', label: 'All content', icon: 'bi-file-earmark-text' },
-  { href: '/admin/about', label: 'About', icon: 'bi-info-circle' },
-  { href: '/admin/services', label: 'Services', icon: 'bi-tools' },
-  { href: '/admin/projects', label: 'Projects', icon: 'bi-kanban' },
-  { href: '/admin/team', label: 'Team', icon: 'bi-people' },
 ]
 
 export default function AdminLayout({
@@ -39,37 +42,47 @@ export default function AdminLayout({
           </div>
 
           <nav className="flex gap-2 overflow-x-auto px-4 py-4 lg:flex-col lg:overflow-visible">
-            <Link
-              href="/admin/content"
-              className="inline-flex shrink-0 items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-main-700 transition hover:bg-primary-50 hover:text-primary-800"
-            >
-              <i className="bi bi-folder2-open" aria-hidden="true" />
-              Content
-            </Link>
+            {adminNavItems.map((item) => {
+              if (item.items) {
+                return (
+                  <details key={item.label} className="group shrink-0 lg:w-full" open>
+                    <summary className="inline-flex w-full cursor-pointer list-none items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-main-700 transition hover:bg-primary-50 hover:text-primary-800">
+                      <i className={`bi ${item.icon}`} aria-hidden="true" />
+                      <span>{item.label}</span>
 
-            <div className="flex shrink-0 gap-2 lg:-mt-1 lg:ml-4 lg:flex-col lg:border-l lg:border-main-200 lg:pl-3">
-              {contentNavItems.map((item) => (
+                      <i
+                        className="bi bi-chevron-down ml-auto text-xs transition group-open:rotate-180"
+                        aria-hidden="true"
+                      />
+                    </summary>
+
+                    <div className="mt-2 flex gap-2 lg:ml-4 lg:flex-col lg:border-l lg:border-main-200 lg:pl-3">
+                      {item.items.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          className="inline-flex shrink-0 items-center gap-3 rounded-xl px-4 py-2.5 text-sm font-medium text-main-600 transition hover:bg-primary-50 hover:text-primary-800"
+                        >
+                          <i className={`bi ${child.icon}`} aria-hidden="true" />
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </details>
+                )
+              }
+
+              return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="inline-flex shrink-0 items-center gap-3 rounded-xl px-4 py-2.5 text-sm font-medium text-main-600 transition hover:bg-primary-50 hover:text-primary-800"
+                  className="inline-flex shrink-0 items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-main-700 transition hover:bg-primary-50 hover:text-primary-800"
                 >
                   <i className={`bi ${item.icon}`} aria-hidden="true" />
                   {item.label}
                 </Link>
-              ))}
-            </div>
-
-            {adminNavItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="inline-flex shrink-0 items-center gap-3 rounded-xl px-4 py-3 text-sm font-medium text-main-700 transition hover:bg-primary-50 hover:text-primary-800"
-              >
-                <i className={`bi ${item.icon}`} aria-hidden="true" />
-                {item.label}
-              </Link>
-            ))}
+              )
+            })}
           </nav>
 
           <div className="mt-auto hidden border-t border-main-200 p-4 lg:block">
@@ -91,6 +104,7 @@ export default function AdminLayout({
               <p className="text-sm font-semibold text-main-1000">Site management</p>
               <p className="text-xs text-main-500">Content, inquiries, health, and settings</p>
             </div>
+
             <button className="inline-flex items-center gap-2 rounded-full bg-primary-600 px-4 py-2 text-sm font-semibold text-main-0 transition hover:bg-primary-700">
               <i className="bi bi-plus-lg" aria-hidden="true" />
               New update
